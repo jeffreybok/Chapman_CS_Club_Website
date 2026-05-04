@@ -3,21 +3,9 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen px-12 pt-28 pb-20 relative overflow-hidden">
-      <div className="relative max-w-[1440px] mx-auto min-h-[calc(100vh-12rem)] flex flex-col justify-center">
-        {/* Logo overlay — sits in front of the binary, hidden on small screens */}
-        <div className="hidden md:block absolute right-[10%] top-[14%] w-[clamp(280px,28vw,460px)] aspect-square pointer-events-none reveal reveal-delay-2">
-          <Image
-            src="/old_cs_logo.png"
-            alt=""
-            fill
-            sizes="(min-width: 768px) 28vw, 0px"
-            className="object-contain drop-shadow-[0_8px_24px_rgba(123,28,44,0.25)]"
-            priority
-          />
-        </div>
-
-        <div className="max-w-[900px] w-full relative">
+    <section className="min-h-screen px-12 pt-28 pb-20 relative overflow-hidden flex items-center">
+      <div className="relative max-w-[1280px] mx-auto w-full flex flex-row items-center justify-start gap-10 lg:gap-16">
+        <div className="max-w-[680px] w-full relative shrink">
         <p className="font-mono text-[11px] text-maroon tracking-[0.12em] uppercase mb-5 flex items-center gap-2.5 reveal">
           <span className="inline-block w-8 h-px bg-maroon" />
           Chapman University · Orange, CA
@@ -63,6 +51,18 @@ export default function Hero() {
             </div>
           ))}
         </div>
+        </div>
+
+        {/* Logo — locked next to the text in flex layout, hidden on small screens */}
+        <div className="hidden md:block relative shrink-0 -mt-32 w-[clamp(260px,24vw,400px)] aspect-square pointer-events-none reveal reveal-delay-2">
+          <Image
+            src="/old_cs_logo.png"
+            alt=""
+            fill
+            sizes="(min-width: 768px) 28vw, 0px"
+            className="object-contain drop-shadow-[0_8px_24px_rgba(123,28,44,0.25)]"
+            priority
+          />
         </div>
       </div>
     </section>
