@@ -25,11 +25,11 @@ export default function PantherHacks() {
             2nd Annual Hackathon
           </span>
           <h2 className="font-mono text-[clamp(22px,2.5vw,34px)] font-bold text-ink leading-tight mb-4">
-            PantherHacks — Chapman&apos;s annual hackathon
+            PantherHacks: Chapman&apos;s annual hackathon
           </h2>
           <p className="text-[15px] text-muted leading-relaxed font-light mb-7">
             PantherHacks is our flagship event: a hackathon organized and run entirely by
-            Chapman CS Club. 2026 marks our <strong>second annual</strong> run, bringing together students from UCLA, UCI, CSULB, and more to build, compete,
+            Chapman CS Club. 2026 marks our <strong>second annual</strong> run, bringing together over 80 students from UCLA, UCI, CSULB, and more to build, compete,
             and collaborate over a 48-hour timespan.
           </p>
           <Link

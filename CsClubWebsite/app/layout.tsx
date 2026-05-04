@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   title: "Chapman Computer Science Club",
   description:
     "Chapman University's CS Club — connect, collaborate, and create in the field of computer science.",
+  icons: {
+    icon: "/old_cs_logo.png",
+    shortcut: "/old_cs_logo.png",
+    apple: "/old_cs_logo.png",
+  },
 };
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();`;

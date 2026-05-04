@@ -7,10 +7,16 @@ const images = [
   "/gallery/photo1.jpg",
   "/gallery/photo2.jpg",
   "/gallery/photo3.jpg",
-  "/gallery/photo4.jpg",
+  "/gallery/photo5.jpg",
+  "/gallery/photo6.jpg",
+  "/gallery/photo7.jpg",
+  "/gallery/photo8.jpg",
+  "/gallery/photo9.jpg",
+  "/gallery/photo10.jpg",
+  "/gallery/photo11.jpg",
 ];
 
-const INTERVAL_MS = 4500;
+const INTERVAL_MS = 2500;
 
 export default function AboutGallery() {
   const [index, setIndex] = useState(0);

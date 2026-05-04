@@ -46,17 +46,36 @@ export default function Board() {
         Our executive board keeps the club running. Interested in joining the board? Come to a meeting and get involved.
       </p>
 
-      <div className="grid grid-cols-5 gap-4 max-sm:grid-cols-3">
-        {boardTiers.map((tier) => (
-          <Fragment key={tier.label}>
-            <div className="col-span-5 max-sm:col-span-3 font-mono text-[10px] text-muted tracking-[0.12em] uppercase pb-2 border-b border-maroon/15 mt-4 first:mt-0">
-              {tier.label}
-            </div>
-            {tier.members.map((m, i) => (
-              <BoardCard key={`${tier.label}-${i}`} member={m} delay={(i % 4) + 1} />
-            ))}
-          </Fragment>
-        ))}
+      <div className="grid grid-cols-5 gap-4 gap-y-2 max-sm:grid-cols-3">
+        {boardTiers.reduce<{ left: typeof boardTiers[number]; right: typeof boardTiers[number] }[]>((rows, tier, idx) => {
+          if (idx % 2 === 0) rows.push({ left: tier, right: boardTiers[idx + 1] });
+          return rows;
+        }, []).map((row, rowIdx) => {
+          const leftSpan = row.left.members.length;
+          const rightSpan = row.right.members.length;
+          const labelBase = "max-sm:col-span-3 font-mono text-[10px] text-muted tracking-[0.12em] uppercase pb-2 border-b border-maroon/15";
+          const spanClass = (n: number) => (n === 2 ? "col-span-2" : "col-span-3");
+          return (
+            <Fragment key={row.left.label}>
+              <div
+                className={`${spanClass(leftSpan)} ${labelBase} ${rowIdx > 0 ? "mt-6" : ""}`}
+              >
+                {row.left.label}
+              </div>
+              <div
+                className={`${spanClass(rightSpan)} ${labelBase} ${rowIdx > 0 ? "mt-6 max-sm:mt-2" : ""}`}
+              >
+                {row.right.label}
+              </div>
+              {row.left.members.map((m, i) => (
+                <BoardCard key={`${row.left.label}-${i}`} member={m} delay={(i % 4) + 1} />
+              ))}
+              {row.right.members.map((m, i) => (
+                <BoardCard key={`${row.right.label}-${i}`} member={m} delay={((i + leftSpan) % 4) + 1} />
+              ))}
+            </Fragment>
+          );
+        })}
       </div>
     </section>
   );
