@@ -3,8 +3,8 @@ import Image from "next/image";
 const events = [
   { icon: "[WS]", title: "Workshops", desc: "Hands-on technical workshops covering tools, frameworks, and fundamentals you won't find in the classroom.", image: "/events/workshops.jpg" },
   { icon: "[CV]", title: "Resume Reviews", desc: "Get your resume critiqued by peers and guests with real industry experience before it lands in a recruiter's hands.", image: "/events/resume.jpg" },
-  { icon: "[LI]", title: "Speaker Events", desc: "Industry professionals join us for talks and Q&As on careers, specialties, and what working in tech actually looks like.", image: "/events/speakers.jpg" },
-  { icon: "[//]", title: "Hackathons", desc: "Compete, collaborate, and build something in 24 hours. We host PantherHacks every year and coordinate attendance at others.", image: "/events/hackathons.jpg" },
+  { icon: "[SE]", title: "Speaker Events", desc: "Industry professionals join us for talks and Q&As on careers, specialties, and what working in tech actually looks like.", image: "/events/speakers.jpg" },
+  { icon: "[PH]", title: "Hackathons", desc: "Compete, collaborate, and build something in 24 hours. We host PantherHacks every year and coordinate attendance at others.", image: "/events/hackathons.jpg" },
   { icon: "[BD]", title: "Bonding Activities", desc: "Game nights, movie nights, coffee runs, and other ways to hang out with members outside of meetings.", image: "/events/bonding.jpg" },
 ];
 
@@ -12,10 +12,10 @@ export default function Events() {
   return (
     <section id="events" className="bg-[#1A0F10] w-full py-24 px-12">
       <div className="max-w-[1100px] mx-auto">
-        <p className="font-mono text-[11px] text-[#F8F4EF]/50 tracking-[0.12em] uppercase mb-3.5 flex items-center gap-2.5 reveal">
+        {/* <p className="font-mono text-[11px] text-[#F8F4EF]/50 tracking-[0.12em] uppercase mb-3.5 flex items-center gap-2.5 reveal">
           <span className="inline-block w-6 h-px bg-[#F8F4EF]/40" />
           What We Do
-        </p>
+        </p> */}
         <h2 className="font-mono text-[clamp(24px,3vw,38px)] font-bold text-[#F8F4EF] leading-tight mb-4 reveal reveal-delay-1">
           Events for everyone
         </h2>
