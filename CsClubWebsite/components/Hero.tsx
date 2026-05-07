@@ -1,16 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const heroStats = [
+  { num: "2021", label: "Founded" },
+  { num: "Weekly", label: "Club Meetings" },
+  { num: "Free", label: "No Dues, Open to All" },
+  { num: "Hackathons", label: "Yearly" },
+];
+
 export default function Hero() {
   return (
+    <>
     <section className="min-h-screen px-12 pt-28 pb-20 relative overflow-hidden flex items-center">
-      <div className="relative max-w-[1280px] mx-auto w-full flex flex-row items-center justify-start gap-10 lg:gap-16">
-        <div className="max-w-[680px] w-full relative shrink">
-        <p className="font-mono text-[11px] text-maroon tracking-[0.12em] uppercase mb-5 flex items-center gap-2.5 reveal">
-          <span className="inline-block w-8 h-px bg-maroon" />
-          Chapman University · Orange, CA
-        </p>
-
+      <div className="relative max-w-[1100px] mx-auto w-full flex flex-row items-center justify-start gap-8 lg:gap-12">
+        <div className="max-w-[600px] w-full relative shrink">
         <h1 className="font-mono text-[clamp(36px,5.5vw,72px)] font-bold text-ink leading-[1.1] mb-7 reveal reveal-delay-1">
           Create.<br />
           Connect.<br />
@@ -28,7 +31,7 @@ export default function Hero() {
             target="_blank"
             className="bg-maroon text-white px-7 py-3.5 font-mono text-xs uppercase tracking-widest rounded-sm hover:bg-maroon-light hover:-translate-y-px transition-all"
           >
-            Join the Club
+            PantherConnect
           </Link>
           <Link
             href="#about"
@@ -38,23 +41,10 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="flex gap-8 mt-16 pt-10 border-t border-maroon/15 flex-wrap reveal reveal-delay-4 max-w-[820px]">
-          {[
-            { num: "2021", label: "Founded" },
-            { num: "Weekly", label: "Club Meetings" },
-            { num: "Free", label: "No Dues, Open to All" },
-            { num: "Hackathons", label: "Yearly" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="font-vt text-4xl text-maroon leading-none">{stat.num}</div>
-              <div className="text-xs text-muted tracking-wide mt-1">{stat.label}</div>
-            </div>
-          ))}
-        </div>
         </div>
 
         {/* Logo — locked next to the text in flex layout, hidden on small screens */}
-        <div className="hidden md:block relative shrink-0 -mt-32 w-[clamp(260px,24vw,400px)] aspect-square pointer-events-none reveal reveal-delay-2">
+        <div className="hidden md:block relative shrink-0 -mt-32 w-[clamp(280px,28vw,460px)] aspect-square pointer-events-none reveal reveal-delay-2">
           <Image
             src="/old_cs_logo.png"
             alt=""
@@ -66,5 +56,17 @@ export default function Hero() {
         </div>
       </div>
     </section>
+
+    <section className="bg-[#1A0F10] w-full px-12 py-12 reveal">
+      <div className="max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        {heroStats.map((stat) => (
+          <div key={stat.label}>
+            <div className="font-vt text-xl sm:text-3xl md:text-4xl text-maroon-light leading-none mb-1.5 whitespace-nowrap">{stat.num}</div>
+            <div className="text-xs text-[#F8F4EF]/55 tracking-wide">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }

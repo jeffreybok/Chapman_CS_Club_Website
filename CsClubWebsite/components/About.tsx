@@ -6,10 +6,10 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
         {/* Left: mission */}
         <div className="reveal">
-          <p className="font-mono text-[11px] text-maroon tracking-[0.12em] uppercase mb-3.5 flex items-center gap-2.5">
+          {/* <p className="font-mono text-[11px] text-maroon tracking-[0.12em] uppercase mb-3.5 flex items-center gap-2.5">
             <span className="inline-block w-6 h-px bg-maroon" />
             About Us
-          </p>
+          </p> */}
           <h2 className="font-mono text-[clamp(24px,3vw,38px)] font-bold text-ink leading-tight mb-4">
             A community built for curious minds
           </h2>

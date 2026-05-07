@@ -31,7 +31,7 @@ export const boardTiers: { label: string; members: BoardMember[] }[] = [
   {
     label: "Events",
     members: [
-      { name: "Maya Federico", role: "General Events Coordinator", linkedin: "https://www.linkedin.com/in/maya-federico-8a8596295/", photo: "/board/benjamin.jpeg" },
+      { name: "Maya Federico", role: "General Events Coordinator", linkedin: "https://www.linkedin.com/in/maya-federico-8a8596295/", photo: "/board/maya.JPG" },
       { name: "Benjamin Chan", role: "General Events Coordinator", linkedin: "https://www.linkedin.com/in/benjamin-k-chan/" , photo: "/board/benjamin.jpeg"},
       { name: "Thaw Han", role: "Special Events Coordinator", linkedin: "https://www.linkedin.com/in/thaw-han-467367339/" , photo: "/board/thaw.png"},
     ],

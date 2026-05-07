@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${vt323.variable} ${spaceMono.variable} ${dmSans.variable} bg-cream`}>
+    <html lang="en" className={`${vt323.variable} ${spaceMono.variable} ${dmSans.variable} bg-cream overflow-x-hidden`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
